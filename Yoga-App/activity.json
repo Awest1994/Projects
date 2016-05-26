@@ -1,0 +1,47 @@
+{"quizlist":[
+  
+	{
+	"question":"Click which picture shows the child postion?",
+	"option1":"child.jpg",
+	"option2":"cobra.jpg",
+	"option3":"dog.jpg"
+	},
+	{
+	"question":"Click which picture shows the Half Moon postion?",
+	"option1":"Half-Moon-Pose.jpg",
+	"option2":"headstand.jpg",
+	"option3":"shoulderstand.jpg"
+	},
+	{
+	"question":"Click which picture shows the Mountain position?",
+	"option1":"tadasana-1.jpg",
+	"option2":"Triangle.jpg",
+	"option3":"warrior1.jpg"
+	},
+	{
+	"question":"Click which picture shows the tree position?",
+	"option1":"Tree-pose.jpg",
+	"option2":"lunge.jpg",
+	"option3":"cat-flow.jpg"
+	},
+	{
+	"question":"Click which picture shows the cobra position?",
+	"option1":"cobra-opennee.jpg",
+	"option2":"fish.jpg",
+	"option3":"back-bend-salute.jpg"
+	},
+	{
+	"question":"Click which picture shows the half-lotus position?",
+	"option1":"half-lotus.jpg",
+	"option2":"warrior2.jpg",
+	"option3":"Bow-Pose.jpg"
+	},
+	{
+	"question":"Click which picture shows the bridge-head position?",
+	"option1":"bridge-head.jpg",
+	"option2":"arm-balance-scorpion.jpg",
+	"option3":"chair.jpg"
+	}
+
+]
+}

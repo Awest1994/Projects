@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    
+<script>
+	
+	
+    function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname+"="+cvalue+"; "+expires;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function checkCookie() {
+        var user=getCookie("username");
+        if (user != "") {
+            alert("Welcome again " + user);
+        } else {
+           user = prompt("Please enter your name:","");
+           if (user != "" && user != null) {
+               setCookie("username", user, 30);
+           }
+        }
+    }
+	
+	function eraseCookie(cname) {
+    setCookie("username","",-1);
+	}
+	
+	function changeName(){
+		eraseCookie("username");
+		setTimeout(function(){
+    		checkCookie();
+		}, 1000);
+	}
+	
+	// scripts here:
+
+	function submitQuiz() {
+		console.log('submitted');
+
+	// get each answer score
+		function answerScore (qName) {
+			var radiosNo = document.getElementsByName(qName);
+
+			for (var i = 0, length = radiosNo.length; i < length; i++) {
+   				if (radiosNo[i].checked) {
+			// do something with radiosNo
+					var answerValue = Number(radiosNo[i].value);
+				}
+			}
+			// change NaNs to zero
+			if (isNaN(answerValue)) {
+				answerValue = 0;
+			}
+			return answerValue;
+		}
+
+	// calc score with answerScore function
+		var calcScore = (answerScore('q1'));
+		console.log("CalcScore: " + calcScore); // it works!
+
+
+	// show score as "score/possible score"
+		var showScore = "Your Score: " + calcScore +"/" + 1;
+	// if 1/1, "correct!"
+		if (calcScore === 1) {
+			showScore = showScore + "&nbsp; <strong>Correct!</strong>"
+		};
+		document.getElementById('userScore').innerHTML = showScore;
+	}
+
+$(document).ready(function() {
+
+	$('#submitButton').click(function() {
+		$(this).addClass('hide');
+	});
+
+});
+	
+	
+</script>
+    
+<head>
+	<div id = "buttons"><button class = "button" onclick = "changeName()">Change Name</button></div>
+ 
+    <title>Yoga Picture Quiz Sample</title>
+    <link href="main.css"rel="stylesheet"type="text/css"/>
+    <meta name=viewport content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 	<script src="jquery.js"></script>
+    <script src="controller.js"></script>
+	
+ 
+</head>
+<body onload="checkCookie()">
+	
+
+<div id="topbar">Yoga Picture Quiz</div>
+    
+<div id = "buttons">
+	  		<p class="questionText">Quiz Type 1<br>Is this the Triangle Pose?</p>
+
+	    	<ul>
+			<img src = ../img/Triangle.jpg><br>
+	    	<input class="answer" type="radio" name="q1" value="1">
+	        <label id="correctString1">True</label>
+				
+	        <input class="answer" type="radio" name="q1" value="0">
+	        <label>False</label>
+			<div class="submitter">
+			<input class="button" id="submitButton" onClick="submitQuiz()"
+			type="submit" value="Submit" />
+			</div>
+    		</ul>
+</div>
+
+<div>
+    	<h2 class="quizScore" id="userScore"></h2>
+</div>
+<br>
+<div id="navContent">
+<p class ="questionText">Quiz Type 2</p>
+<div id="game1"></div>
+<div id="game2"></div>
+</div>
+
+	<p class = "questionText">Thanks to YogaCards.com for supplying the images needed for this quiz.</p>
+	
+</body>
+</html>

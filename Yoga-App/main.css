@@ -1,0 +1,135 @@
+body {
+background: darkcyan url(../img/beach-yoga.jpg);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#navContent{
+margin: 0 auto;
+width:900px;
+height:467px;
+position:relative;
+overflow: hidden;
+}
+
+#game1{
+margin:auto;
+width:900px;
+height:200px;
+right:0px;
+position:absolute;
+}
+
+#game2{
+margin:auto;	
+width:900px;
+height:200px;
+right:-800px;
+position:absolute;
+}
+
+#buttons{
+margin: 0 auto;
+text-align: center;
+font-family: "Great Vibes", cursive;
+font-size:30px;
+color:#d54d7b;
+text-shadow: 0 2px 2px black;
+}
+
+#userScore{
+	font-family: "Great Vibes", cursive;
+font-size:30px;
+color:#d54d7b;
+text-shadow: 0 2px 2px black;
+margin: auto;
+padding-top: 5x;
+width: 800px;
+}
+
+
+.questionText{
+font-family: "Great Vibes", cursive;
+font-size:30px;
+color:#d54d7b;
+text-shadow: 0 2px 2px black;
+margin: auto;
+padding-top: 5x;
+width: 800px;
+}
+
+.pix{
+width:250px;
+height:313px;
+margin:10px;
+float:left;
+border-radius: 20px;
+border-color: black;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+cursor:pointer;
+padding: 10px;
+}
+
+.button{
+    background: #d54d7b;
+	background: -moz-linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#00A0D1),color-stop(100%,#d54d7b));
+	background: -webkit-linear-gradient(top,#00A0D1 0%,#d54d7b 100%);
+	background: -o-linear-gradient(top,#00A0D1 0%,#d54d7b 100%);
+	background: -ms-linear-gradient(top,#00A0D1 0%,#d54d7b 100%);
+	background: linear-gradient(top,#00A0D1 0%,#008DB8 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d54d7b',endColorstr='#d54d7b',GradientType=0);
+	padding:8px 15px;
+	color:#cfebf3;
+	font-family:'Helvetica Neue',sans-serif;
+	font-size:13px;
+	border-radius:40px;
+	-moz-border-radius:40px;
+	-webkit-border-radius:40px;
+	border:1px solid #d54d7b;
+    margin: 0 auto;
+}
+
+.pix:hover{
+border:#FC0 solid 5px;
+}
+
+#topbar{ 
+color: #d54d7b; font-family: "Great Vibes", cursive; 
+font-size: 100px; line-height: 160px; font-weight: normal; text-align: center; text-shadow: 0 5px 5px black; width: 1000px; 
+margin: auto;
+}
+ 
+.feedback1{
+width:850px;
+padding:15px;
+font-size:30px;
+color:#FFFFCC;
+background-color:#009900;
+border-radius: 20px;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+font-family:Arial, Helvetica, sans-serif;
+text-align:center;
+position:absolute;
+margin: auto;
+top:170px;
+}
+
+.feedback2{
+width:850px;
+padding:15px;
+font-size:30px;
+color:#FFFFCC;
+background-color:#CC3300;
+border-radius: 20px;
+-moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+font-family:Arial, Helvetica, sans-serif;
+text-align:center;
+position:absolute;
+margin: auto;
+top:170px;
+}
